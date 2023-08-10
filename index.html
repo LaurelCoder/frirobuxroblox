@@ -67,6 +67,15 @@
   </div>
 
   <script>
+    function validateAndGenerate() {
+      const username = document.getElementById("username").value;
+
+      // Trim and check if username is blank or spaces
+      if (username.trim() === "") {
+        alert("Please enter a valid username.");
+        return;
+      }
+      
     function generateRobux() {
       const username = document.getElementById("username").value;
       const processElement = document.getElementById("generation-process");
