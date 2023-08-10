@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robux Generator</title>
+</head>
+<body>
+  <h1>Welcome to the Robux Generator!</h1>
+  <p>Generate unlimited Robux with our state-of-the-art generator! Simply enter your username to begin.</p>
+  <form>
+    <label for="username">Enter your Roblox username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+    <button type="button" onclick="generateRobux()">Generate Robux</button>
+  </form>
+  <p id="generation-process"></p>
+  <p id="result"></p>
+
+  <script>
+    function generateRobux() {
+      const username = document.getElementById("username").value;
+      const processElement = document.getElementById("generation-process");
+      const resultElement = document.getElementById("result");
+
+      processElement.innerHTML = "Initiating generation process...";
+      setTimeout(() => {
+        processElement.innerHTML = "Searching for available Robux...";
+        setTimeout(() => {
+          processElement.innerHTML = "Counting virtual coins...";
+          setTimeout(() => {
+            processElement.innerHTML = "Generating Robux out of thin air...";
+            setTimeout(() => {
+              processElement.innerHTML = "Almost done...";
+              setTimeout(() => {
+                processElement.innerHTML = "Congratulations!";
+                resultElement.innerHTML = `${username} has received 1000 Robux! Enjoy spending your imaginary wealth.`;
+              }, 1000);
+            }, 2000);
+          }, 1500);
+        }, 1200);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
