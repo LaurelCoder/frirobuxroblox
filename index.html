@@ -60,7 +60,7 @@
     <form>
       <label for="username">Enter your Roblox username:</label><br>
       <input type="text" id="username" name="username"><br>
-      <button type="button" onclick="generateRobux()">Generate Robux</button>
+      <button type="button" onclick="validateAndGenerate()">Generate Robux</button>
     </form>
     <p id="generation-process"></p>
     <p id="result"></p>
@@ -75,9 +75,11 @@
         alert("Please enter a valid username.");
         return;
       }
-      
-    function generateRobux() {
-      const username = document.getElementById("username").value;
+
+      generateRobux(username);
+    }
+
+    function generateRobux(username) {
       const processElement = document.getElementById("generation-process");
       const resultElement = document.getElementById("result");
 
